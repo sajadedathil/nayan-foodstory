@@ -1,0 +1,96 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #1610d0;
+}
+
+/* Header Styles */
+.main-header {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation Styles */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #FF4500; /* Orange color on hover */
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-color: #FFD700; /* Gold color */
+  text-align: center;
+  padding: 80px 0;
+  color: #333;
+}
+
+/* Content Section Styles */
+.content-section {
+  padding: 50px;
+  background-color: #FFF;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.content-section h2 {
+  color: #FF4500; /* Orange color for section titles */
+  margin-bottom: 20px;
+}
+
+/* Add animations for section entrance */
+.content-section.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Add fade-in animation for the footer */
+.main-footer.in-view {
+  opacity: 1;
+}
